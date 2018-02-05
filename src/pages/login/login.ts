@@ -12,7 +12,7 @@ export class LogIn {
 
   }
 
-  pushPage(){
+  home(){
     this.navCtrl.push(HomePage);
   }
 

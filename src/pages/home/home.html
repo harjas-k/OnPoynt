@@ -7,10 +7,34 @@
   </ion-navbar>
 </ion-header>
 
+
 <ion-content padding>
   Welcome to OnPoynt
   <p>
     For the full website, visit <a href="https://onpoynt.com/">here</a>.
   </p>
+  <button ion-button menuToggle> Toggle Menu </button>
 </ion-content>
+
+<ion-menu [content]="content">
+<ion-content padding>
+  <ion-list>
+    <button ion-item (click)="openPage(HomePage)">
+      Home
+    </button>
+    <button ion-item>
+      Race
+    </button>
+    <button ion-item>
+      My Stats
+    </button>
+    <button ion-item (click)="closeMenu()">
+      Close Menu
+    </button>
+  </ion-list>
+</ion-content>
+</ion-menu>
+
+<ion-nav #content [root]="rootPage"></ion-nav>
+
 
