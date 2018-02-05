@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { App, MenuController } from 'ionic-angular';
-import { HomePage } from '../home/home';
 
 
 
@@ -13,9 +12,7 @@ export class HomePage {
     menu.enable(true);
   }
 
-    openPage(Page){
-    this.navCtrl.push(Page);
-  }
+
 }
   
 
