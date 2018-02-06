@@ -1,5 +1,7 @@
 // http://ionicframework.com/docs/theming/
-
+[scrollbar-y-auto] .scroll-content {
+  overflow-y: hidden !important;
+}
 
 // App Global Sass
 // --------------------------------------------------

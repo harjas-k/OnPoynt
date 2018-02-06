@@ -1,4 +1,4 @@
-<ion-content padding>
+<ion-content padding scrollbar-y-auto>
   <div padding>
   <img src="../assets/imgs/onpoynt.png" alt="OnPoynt Aerial Solution">
   </div>
@@ -18,17 +18,21 @@
 
   </ion-list>
 
+  <div align = "right">
+    <button ion-button clear>Forgot Password?</button>
+  </div>
+
   <div padding>
-    <button ion-button color="primary" block (click)="home()"> Login </button>
+    <button ion-button color="primary" block [navPush]="home"> Login </button>
+  </div>
+  
   
 
-  <p align="center">
-    Forgot your <a href="">Username?</a> or <a href="">Password?</a>
-    <br>
-    Not registered? <a href=""> Create an account. </a>
-  </p>
-
+  <div padding align ="center">
+    <button ion-button clear [navPush]="sign"> Don't have an account? Sign Up </button>
   </div>
+
+  
 
  
 
