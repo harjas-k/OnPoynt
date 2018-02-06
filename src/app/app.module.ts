@@ -9,6 +9,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LogIn } from '../pages/login/login';
 import { SignUp } from '../pages/signup/signup';
+import ( Profile ) from '../pages/profile/profile';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { SignUp } from '../pages/signup/signup';
     MyApp,
     LogIn,
     HomePage,
-    SignUp
+    SignUp,
+    Profile
     
   ],
   imports: [
@@ -28,7 +30,8 @@ import { SignUp } from '../pages/signup/signup';
     MyApp,
     LogIn,
     HomePage,
-    SignUp
+    SignUp,
+    Profile
     
   ],
   providers: [
