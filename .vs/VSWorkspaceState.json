@@ -6,10 +6,12 @@
     "\\resources\\ios",
     "\\src",
     "\\src\\app",
-    "\\src\\assets",
+    "\\src\\assets\\icon",
+    "\\src\\assets\\imgs",
     "\\src\\pages",
-    "\\src\\pages\\home",
-    "\\src\\pages\\signup"
+    "\\src\\pages\\login",
+    "\\src\\pages\\profile"
   ],
+  "SelectedNode": "\\src\\pages\\home\\home.html",
   "PreviewInSolutionExplorer": false
 }
