@@ -1,3 +1,73 @@
-<ion-content>
-profile page
-</ion-content>
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Create an Account
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content scrollbar-y-auto>
+    <ion-list inset>
+
+        <ion-item>
+            <ion-input type="text" placeholder="Racer Nickname"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input type="text" placeholder="FAA Drone Registration"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input type="text" placeholder="School/Team"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Racing Class</ion-label>
+            <ion-select [(ngModel)]="Class" interface="popover">
+                <ion-option value="Tiny whoop">Tiny whoop</ion-option>
+                <ion-option value="180mm-220mm">180mm-220mm</ion-option>
+                <ion-option value="250mm-300mm">250mm-300mm</ion-option>
+
+            </ion-select>
+        </ion-item>
+
+
+
+
+        <ion-item>
+
+                <ion-input placeholder="Racer Category"></ion-input>
+        </ion-item>
+
+       
+
+        <ion-list>
+
+            <ion-item>
+                <ion-label>Beginner</ion-label>
+                <ion-checkbox [(ngModel)]="Beginner"></ion-checkbox>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Competitive</ion-label>
+                <ion-checkbox [(ngModel)]="Competitive"></ion-checkbox>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Expert</ion-label>
+                <ion-checkbox [(ngModel)]="Expert"></ion-checkbox>
+            </ion-item>
+
+        </ion-list>
+
+
+
+
+    </ion-list>
+    <div padding>
+        <button ion-button color ="light" [navPush]="home" block>Submit</button>
+    </div>
+
+
+  
