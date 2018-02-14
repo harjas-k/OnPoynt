@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { App, MenuController } from 'ionic-angular';
 import { Profile } from '../profile/profile';
+import { Sponsor } from '../sponsor/sponsor';
 
 
 @Component({
@@ -9,6 +10,7 @@ import { Profile } from '../profile/profile';
 })
 export class HomePage {
   profile = Profile;
+  sponsor = Sponsor;
 
   constructor(app: App, menu: MenuController) {
     menu.enable(true);
