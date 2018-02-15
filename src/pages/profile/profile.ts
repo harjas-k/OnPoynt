@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { HomePage } from '../home/home';
+
 
 
 
@@ -7,6 +9,8 @@ import { Component } from '@angular/core';
   templateUrl: 'profile.html'
 })
 export class Profile {
-  
+
+  home= HomePage;
+
 }
 
