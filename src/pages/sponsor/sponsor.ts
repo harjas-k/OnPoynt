@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { HomePage } from '../home/home';
 import { NavController } from 'ionic-angular';
-import {SponsorshipConfirmation} from '../sponsorconf/sponsorconf';
+import {SponsorConfirmation} from '../sponsorconf/sponsorconf';
 
 
 
@@ -13,7 +13,7 @@ import {SponsorshipConfirmation} from '../sponsorconf/sponsorconf';
 
 export class Sponsor {
 
-  sc = SponsorshipConfirmation;
+  sc = SponsorConfirmation;
 
   constructor(public navCtrl: NavController) {
     
