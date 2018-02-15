@@ -12,6 +12,9 @@ import { SignUp } from '../pages/signup/signup';
 import { Profile } from '../pages/profile/profile';
 import { Sponsor } from '../pages/sponsor/sponsor';
 import { SponsorConfirmation } from '../pages/sponsorconf/sponsorconf';
+import { UpcomingEvents } from '../pages/upcoming/upcoming';
+import { ForgotPassword } from '../pages/forgot/forgot';
+import { MyStats } from '../pages/mystats/mystats';
 
 
 @NgModule({
@@ -22,7 +25,10 @@ import { SponsorConfirmation } from '../pages/sponsorconf/sponsorconf';
     SignUp,
     Profile,
     Sponsor,
-    SponsorConfirmation
+    SponsorConfirmation,
+    UpcomingEvents,
+    ForgotPassword,
+    MyStats
     
   ],
   imports: [
@@ -37,7 +43,10 @@ import { SponsorConfirmation } from '../pages/sponsorconf/sponsorconf';
     SignUp,
     Profile,
     Sponsor,
-    SponsorConfirmation
+    SponsorConfirmation,
+    UpcomingEvents,
+    ForgotPassword,
+    MyStats
     
   ],
   providers: [
