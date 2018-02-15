@@ -4,6 +4,7 @@ import { HomePage } from '../home/home';
 
 
 
+
 @Component({
   selector: 'page-profile',
   templateUrl: 'profile.html'

@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Confirm Registration
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+
+<div padding>
+    <h5 align="center">  Please read the following terms and conditions. </h5>
+</div>
+
+
+
+
+<div padding>
+    <h6 align="center">  Terms and conditions filler text</h6>
+</div>
+
+
+
+<div padding>
+    <h6 align="left">  Do you agree to te terms and conditions?  </h6>
+</div>
+
+
+<ion-list>
+
+    <ion-item>
+        <ion-label>Beginner</ion-label>
+        <ion-checkbox [(ngModel)]="Yes"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Competitive</ion-label>
+        <ion-checkbox [(ngModel)]="No"></ion-checkbox>
+    </ion-item>
+
+
+    <div padding align="center">
+        <button ion-button color="light" [navPush]="sc"> Confirm </button>
+    </div>

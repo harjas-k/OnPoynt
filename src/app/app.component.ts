@@ -7,6 +7,8 @@ import { HomePage } from '../pages/home/home';
 import { LogIn } from '../pages/login/login';
 import { SignUp } from '../pages/signup/signup';
 import { Profile } from '../pages/profile/profile';
+import { Sponsor } from '../pages/sponsor/sponsor';
+import { SponsorConfirmation } from '../pages/sponsorconf/sponsorconf';
 
 
 @Component({

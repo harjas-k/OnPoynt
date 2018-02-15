@@ -11,6 +11,7 @@ import { LogIn } from '../pages/login/login';
 import { SignUp } from '../pages/signup/signup';
 import { Profile } from '../pages/profile/profile';
 import { Sponsor } from '../pages/sponsor/sponsor';
+import { SponsorConfirmation } from '../pages/sponsorconf/sponsorconf';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { Sponsor } from '../pages/sponsor/sponsor';
     HomePage,
     SignUp,
     Profile,
-    Sponsor
+    Sponsor,
+    SponsorConfirmation
     
   ],
   imports: [
@@ -34,7 +36,8 @@ import { Sponsor } from '../pages/sponsor/sponsor';
     HomePage,
     SignUp,
     Profile,
-    Sponsor
+    Sponsor,
+    SponsorConfirmation
     
   ],
   providers: [
