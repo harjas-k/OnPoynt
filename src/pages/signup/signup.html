@@ -33,6 +33,11 @@
       <ion-input type="text" placeholder="MM/DD/YYYY"></ion-input>
     </ion-item>
 
+      <ion-item>
+          <ion-input type="text" placeholder="Zipcode"></ion-input>
+      </ion-item>
+
+
     <ion-item>
       <ion-label>Your State</ion-label>
       <ion-select [(ngModel)]="state" interface="popover" >
@@ -53,6 +58,6 @@
 
   </ion-list>
   <div padding>
-  <button ion-button [navPush]="home" block>Register</button>
+  <button ion-button [navPush]="sc" block>Register</button>
   </div>
-
+</ion-content>

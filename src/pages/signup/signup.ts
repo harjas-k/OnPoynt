@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { HomePage } from '../home/home';
+import { NavController } from 'ionic-angular';
+import {SponsorConfirmation} from '../sponsorconf/sponsorconf';
 
 
 @Component({
@@ -7,6 +9,10 @@ import { HomePage } from '../home/home';
   templateUrl: 'signup.html'
 })
 export class SignUp {
-  home= HomePage;
+    sc = SponsorConfirmation;
+
+  constructor(public navCtrl: NavController) {
+    
+  }
 }
 
