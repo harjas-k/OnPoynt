@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { HomePage } from '../home/home';
+import { AlertController } from 'ionic-angular';
+
 
 
 
@@ -15,3 +17,6 @@ export class Sponsor {
 
 
 }
+
+
+
