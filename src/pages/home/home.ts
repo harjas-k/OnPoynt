@@ -5,6 +5,7 @@ import { Sponsor } from '../sponsor/sponsor';
 import { UpcomingEvents } from '../upcoming/upcoming';
 import { MyStats } from '../mystats/mystats';
 import { RacerSafety } from '../safety/safety';
+import { Mode } from '../modescreen/modescreen';
 
 
 @Component({
@@ -17,6 +18,7 @@ export class HomePage {
   upcoming = UpcomingEvents;
   stats = MyStats;
   safe = RacerSafety;
+  mode = Mode;
 
   constructor(app: App, menu: MenuController) {
     menu.enable(true);
