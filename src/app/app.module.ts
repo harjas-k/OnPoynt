@@ -15,6 +15,8 @@ import { SponsorConfirmation } from '../pages/sponsorconf/sponsorconf';
 import { UpcomingEvents } from '../pages/upcoming/upcoming';
 import { ForgotPassword } from '../pages/forgot/forgot';
 import { MyStats } from '../pages/mystats/mystats';
+import { RacerSafety } from '../pages/safety/safety';
+import { Mode } from '../pages/modescreen/modescreen';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { MyStats } from '../pages/mystats/mystats';
     SponsorConfirmation,
     UpcomingEvents,
     ForgotPassword,
-    MyStats
+    MyStats,
+    RacerSafety,
+    Mode
     
   ],
   imports: [
@@ -46,7 +50,9 @@ import { MyStats } from '../pages/mystats/mystats';
     SponsorConfirmation,
     UpcomingEvents,
     ForgotPassword,
-    MyStats
+    MyStats,
+    RacerSafety,
+    Mode
     
   ],
   providers: [

@@ -2,15 +2,17 @@
   "ExpandedNodes": [
     "",
     "\\resources",
-    "\\resources\\android",
-    "\\resources\\ios",
     "\\src",
-    "\\src\\app",
+    "\\src\\assets",
+    "\\src\\assets\\imgs",
     "\\src\\pages",
-    "\\src\\pages\\home",
-    "\\src\\pages\\login",
-    "\\src\\pages\\profile"
+    "\\src\\pages\\forgot",
+    "\\src\\pages\\mystats",
+    "\\src\\pages\\signup",
+    "\\src\\pages\\sponsor",
+    "\\src\\pages\\sponsorconf",
+    "\\src\\pages\\upcoming"
   ],
-  "SelectedNode": "\\src\\pages\\home\\home.ts",
+  "SelectedNode": "\\src\\assets\\imgs\\utd-logo.png",
   "PreviewInSolutionExplorer": false
 }
