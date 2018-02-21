@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { HomePage } from '../home/home';
 import { AlertController } from 'ionic-angular';
-import {SafetyPage} from '../safety/safety';
+import { SafetyPage } from '../safety/safety';
 
 
 @Component({
