@@ -3,16 +3,12 @@
     "",
     "\\resources",
     "\\src",
-    "\\src\\assets",
-    "\\src\\assets\\imgs",
+    "\\src\\app",
     "\\src\\pages",
-    "\\src\\pages\\forgot",
-    "\\src\\pages\\mystats",
-    "\\src\\pages\\signup",
-    "\\src\\pages\\sponsor",
-    "\\src\\pages\\sponsorconf",
-    "\\src\\pages\\upcoming"
+    "\\src\\pages\\eleader",
+    "\\src\\pages\\home",
+    "\\src\\pages\\login"
   ],
-  "SelectedNode": "\\src\\assets\\imgs\\utd-logo.png",
+  "SelectedNode": "\\src\\app\\app.module.ts",
   "PreviewInSolutionExplorer": false
 }

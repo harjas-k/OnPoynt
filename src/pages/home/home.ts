@@ -6,7 +6,9 @@ import { UpcomingEvents } from '../upcoming/upcoming';
 import { MyStats } from '../mystats/mystats';
 import { RacerSafety } from '../safety/safety';
 import { Mode } from '../modescreen/modescreen';
-
+import { RacerStats } from '../racerstats/racerstats';
+import { RacerLeaderboard } from '../rleader/rleader';
+import { EventLeaderboard } from '../eleader/eleader';
 
 @Component({
   selector: 'page-home',
@@ -19,6 +21,9 @@ export class HomePage {
   stats = MyStats;
   safe = RacerSafety;
   mode = Mode;
+  racerstats = RacerStats;
+  rlead = RacerLeaderboard;
+  elead = EventLeaderboard;
 
   constructor(app: App, menu: MenuController) {
     menu.enable(true);
