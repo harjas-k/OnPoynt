@@ -20,6 +20,7 @@ import { Mode } from '../pages/modescreen/modescreen';
 import { RacerStats } from '../pages/racerstats/racerstats';
 import { RacerLeaderboard } from '../pages/rleader/rleader';
 import { EventLeaderboard } from '../pages/eleader/eleader';
+import { TeamLeaderboard } from '../pages/tleader/tleader';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { EventLeaderboard } from '../pages/eleader/eleader';
     Mode,
     RacerStats,
     RacerLeaderboard,
-    EventLeaderboard
+    EventLeaderboard,
+    TeamLeaderboard
     
   ],
   imports: [
@@ -60,7 +62,8 @@ import { EventLeaderboard } from '../pages/eleader/eleader';
     Mode,
     RacerStats,
     RacerLeaderboard,
-    EventLeaderboard
+    EventLeaderboard,
+    TeamLeaderboard
     
   ],
   providers: [
