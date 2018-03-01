@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import { HomePage } from '../home/home';
 import { AlertController } from 'ionic-angular';
-import { SafetyPage } from '../safety/safety';
+
+
+import { RacerSafety } from '../safety/safety';
+
 
 
 @Component({
@@ -11,7 +14,7 @@ import { SafetyPage } from '../safety/safety';
 
 
 export class Sponsor {
-  safetypg = SafetyPage;
+  safetypg = RacerSafety;
 
 }
 

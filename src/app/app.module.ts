@@ -17,7 +17,9 @@ import { ForgotPassword } from '../pages/forgot/forgot';
 import { MyStats } from '../pages/mystats/mystats';
 import { RacerSafety } from '../pages/safety/safety';
 import { Mode } from '../pages/modescreen/modescreen';
-
+import { RacerStats } from '../pages/racerstats/racerstats';
+import { RacerLeaderboard } from '../pages/rleader/rleader';
+import { EventLeaderboard } from '../pages/eleader/eleader';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,10 @@ import { Mode } from '../pages/modescreen/modescreen';
     ForgotPassword,
     MyStats,
     RacerSafety,
-    Mode
+    Mode,
+    RacerStats,
+    RacerLeaderboard,
+    EventLeaderboard
     
   ],
   imports: [
@@ -52,7 +57,10 @@ import { Mode } from '../pages/modescreen/modescreen';
     ForgotPassword,
     MyStats,
     RacerSafety,
-    Mode
+    Mode,
+    RacerStats,
+    RacerLeaderboard,
+    EventLeaderboard
     
   ],
   providers: [
