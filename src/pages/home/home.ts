@@ -9,6 +9,8 @@ import { Mode } from '../modescreen/modescreen';
 import { RacerStats } from '../racerstats/racerstats';
 import { RacerLeaderboard } from '../rleader/rleader';
 import { EventLeaderboard } from '../eleader/eleader';
+import { TeamLeaderboard } from '../tleader/tleader';
+import { FanPage } from '../fanpage/fanpage';
 
 @Component({
   selector: 'page-home',
@@ -24,6 +26,8 @@ export class HomePage {
   racerstats = RacerStats;
   rlead = RacerLeaderboard;
   elead = EventLeaderboard;
+  tlead = TeamLeaderboard;
+  fan = FanPage;
 
   constructor(app: App, menu: MenuController) {
     menu.enable(true);
