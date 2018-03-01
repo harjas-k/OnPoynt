@@ -21,6 +21,7 @@ import { RacerStats } from '../pages/racerstats/racerstats';
 import { RacerLeaderboard } from '../pages/rleader/rleader';
 import { EventLeaderboard } from '../pages/eleader/eleader';
 import { TeamLeaderboard } from '../pages/tleader/tleader';
+import { FanPage } from '../pages/fanpage/fanpage';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { TeamLeaderboard } from '../pages/tleader/tleader';
     RacerStats,
     RacerLeaderboard,
     EventLeaderboard,
-    TeamLeaderboard
+    TeamLeaderboard,
+    FanPage
     
   ],
   imports: [
@@ -63,7 +65,8 @@ import { TeamLeaderboard } from '../pages/tleader/tleader';
     RacerStats,
     RacerLeaderboard,
     EventLeaderboard,
-    TeamLeaderboard
+    TeamLeaderboard,
+    FanPage
     
   ],
   providers: [
