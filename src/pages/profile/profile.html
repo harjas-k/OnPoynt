@@ -1,0 +1,64 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Create an Account
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content scrollbar-y-auto>
+	<form [formGroup]="profileForm" name="racerProfileForm" (ngSubmit)="verifyContents()">
+    <ion-list inset>
+
+        <ion-item>
+            <ion-input [formControl]="profileForm.controls['racerNickname']" type="text" placeholder="Racer Nickname"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input [formControl]="profileForm.controls['FAAregistrationNumber']" type="number" placeholder="FAA Drone Registration"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input [formControl]="profileForm.controls['teamName']" type="text" placeholder="School/Team"></ion-input>
+        </ion-item>
+
+        <!--<ion-item>
+            <ion-label>Racing Class</ion-label>
+            <ion-select interface="popover">
+                <ion-option value="Tiny Whoop">Tiny Whoop</ion-option>
+                <ion-option value="180mm-220mm">180mm-220mm</ion-option>
+                <ion-option value="250mm-300mm">250mm-300mm</ion-option>
+
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+			<ion-label>Racer Category</ion-label>
+			<ion-select interface="popover">
+				<ion-option value="Beginner">Beginner</ion-option>
+				<ion-option value="Competitive">Competitive</ion-option>
+				<ion-option value="Expert">Expert</ion-option>
+			</ion-select>
+		</ion-item>
+		
+		-->
+		
+		<div padding></div>
+		
+		<button ion-button id="class-tiny-whoop" [color]="buttonColorTinyWhoop" (click)="classButtonPressed(1)">Tiny Whoop</button>  <button ion-button id="class-180-220" [color]="buttonColor180_220" (click)="classButtonPressed(2)">180mm-220mm</button> <button ion-button id="class-250-300" [color]="buttonColor250_300" (click)="classButtonPressed(3)">250mm-300mm</button>
+		
+		
+		<div padding></div>
+		
+		<button ion-button id="cat-beginner" [color]="buttonColorBeginner" (click)="categoryButtonPressed(1)">Beginner</button> <button ion-button id="cat-competitive" [color]="buttonColorCompetitive" (click)="categoryButtonPressed(2)">Competitive</button> <button ion-button id="cat-expert" [color]="buttonColorExpert" (click)="categoryButtonPressed(3)">Expert</button>
+
+
+    </ion-list>
+	</form>
+    <div padding>
+        <button ion-button [disabled]="!profileForm.valid" (click)="verifyContents()" color="onpoynt-red" block>Submit</button>
+    </div>
+
+
+  

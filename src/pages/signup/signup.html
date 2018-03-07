@@ -7,52 +7,46 @@
 </ion-header>
 
 <ion-content scrollbar-y-auto>
-  <ion-list inset>
+	<form [formGroup]="accountForm" name="registrationForm">
+		<ion-list inset>
+			<ion-item>
+				<ion-input [formControl]="accountForm.controls['firstName']" type="text" placeholder="First Name"></ion-input>
+			</ion-item>
 
-     <ion-item>
-      <ion-input type="text" placeholder="First Name"></ion-input>
-    </ion-item>
+			<ion-item>
+				<ion-input [formControl]="accountForm.controls['lastName']" type="text" placeholder="Last Name"></ion-input>
+			</ion-item>
 
-    <ion-item>
-      <ion-input type="text" placeholder="Last Name"></ion-input>
-    </ion-item>
+			<ion-item>
+				<ion-input [formControl]="accountForm.controls['email']" type="text" placeholder="Email Address" email></ion-input>
+			</ion-item>
 
-     <ion-item>
-      <ion-input type="text" placeholder="Email Address"></ion-input>
-    </ion-item>
+			<ion-item>
+				<ion-input [formControl]="accountForm.controls['password']" type="password" placeholder="Password"></ion-input>
+			</ion-item>
 
-     <ion-item>
-      <ion-input type="password" placeholder="Password"></ion-input>
-    </ion-item>
+			<ion-item>
+				<ion-input [formControl]="accountForm.controls['confPassword']" type="password" placeholder="Confirm Password"></ion-input>
+			</ion-item>
 
-    <ion-item>
-      <ion-input type="password" placeholder="Confirm Password"></ion-input>
-    </ion-item>
+			<ion-item>
+				<ion-input [formControl]="accountForm.controls['dob']" type="date" placeholder="MM/DD/YYYY"></ion-input>
+			</ion-item>
 
-    <ion-item>
-      <ion-input type="text" placeholder="MM/DD/YYYY"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Your State</ion-label>
-      <ion-select [(ngModel)]="state" interface="popover" >
-        <ion-option value="tx">Texas</ion-option>
-        <ion-option value="ca">California</ion-option>
-        <ion-option value="ny">New York</ion-option>
-      </ion-select>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Your City</ion-label>
-      <ion-select [(ngModel)]="city" interface="popover">
-        <ion-option value="dallas">Dallas</ion-option>
-        <ion-option value="austin">Austin</ion-option>
-        <ion-option value="houston">Houston</ion-option>
-      </ion-select>
-    </ion-item>
-
-  </ion-list>
-  <div padding>
-  <button ion-button [navPush]="home" block>Register</button>
-  </div>
+			<ion-item>
+				<ion-input [formControl]="accountForm.controls['zipcode']" type="number" placeholder="Zipcode"></ion-input>
+			</ion-item>
+		</ion-list>
+		
+		<div padding>
+			<button ion-button id="racer-button" (click)="racerButtonClicked()" [color]="buttonColorRacer">Racer</button> <button ion-button id="fan-button" [color]="buttonColorFan" (click)="fanButtonClicked()">Fan</button>
+		</div>
+		
+		<div padding>
+			<button ion-button [disabled]="!accountForm.valid" (click)="verifyContents()"  block color="onpoynt-red">Register</button>
+		</div>
+  </form>
+		<div padding>
+			<p id="error_message">{{responseData.response}}<p>
+		</div>
 </ion-content>
