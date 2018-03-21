@@ -9,27 +9,33 @@
   <ion-list inset>
 
      <ion-item>
-      <ion-input type="text" placeholder="Email*"></ion-input>
+         <h6 align="left"> <ion-icon name="ios-mail-outline"></ion-icon> Email* </h6>
     </ion-item>
 
     <ion-item>
-      <ion-input type="password" placeholder="Password*"></ion-input>
+        <h6 align="left"> <ion-icon name="ios-lock-outline"></ion-icon> Password* </h6>
     </ion-item>
 
   </ion-list>
 
   <div align = "right">
-    <button ion-button clear [navPush]="forgot">Forgot Password?</button>
-  </div>
+      <button ion-button color="dark" [navPush]="forgot" clear>Forgot Password?</button>  
+      </div>
+
+
+
+   
 
   <div padding>
-    <button ion-button color="primary" block [navPush]="home"> Login </button>
+    <button ion-button color="danger" block [navPush]="home"> Login </button>
   </div>
   
-  
+
+
 
   <div padding align ="center">
-    <button ion-button clear [navPush]="sign"> Don't have an account? Sign Up </button>
+    <button ion-button color="dark" [navPush]="sign" clear> Don't have an account? Sign Up </button>
+      
   </div>
 
   
