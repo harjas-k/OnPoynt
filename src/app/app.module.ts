@@ -22,6 +22,7 @@ import { RacerLeaderboard } from '../pages/rleader/rleader';
 import { EventLeaderboard } from '../pages/eleader/eleader';
 import { TeamLeaderboard } from '../pages/tleader/tleader';
 import { FanPage } from '../pages/fanpage/fanpage';
+import { Video } from '../pages/video/video';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { FanPage } from '../pages/fanpage/fanpage';
     RacerLeaderboard,
     EventLeaderboard,
     TeamLeaderboard,
-    FanPage
+    FanPage,
+    Video
     
   ],
   imports: [
@@ -66,7 +68,8 @@ import { FanPage } from '../pages/fanpage/fanpage';
     RacerLeaderboard,
     EventLeaderboard,
     TeamLeaderboard,
-    FanPage
+    FanPage,
+    Video
     
   ],
   providers: [

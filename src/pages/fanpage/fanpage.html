@@ -7,118 +7,51 @@
 <ion-content>
 
 
-    <ion-searchbar [(ngModel)]="myInput"
-                   [showCancelButton]="shouldShowCancel"
-                   (ionInput)="onInput($event)"
-                   (ionCancel)="onCancel($event)">
+    <ion-searchbar placeholder="Search"
+      (ionInput)="filterItems($event)">
     </ion-searchbar>
+    
+    <ion-list>
+      <ion-item *ngFor="let item of items">
+       {{item}}
+      </ion-item>
+    </ion-list> 
+    
+    <ion-list>
+      <ion-item>
+        <ion-label>John Miller</ion-label>
+        <button ion-button outline item-end>Follow
+          <ion-icon name="star"></ion-icon>
+        </button>
+      </ion-item>
 
+      <ion-item>
+        <ion-label>Jake Miller</ion-label>
+        <button ion-button outline item-end>Follow
+          <ion-icon name="star"></ion-icon>
+        </button>
+      </ion-item>
 
-    <ion-card>
-        <ion-card-content>
-            John Miller 
+      <ion-item>
+        <ion-label>Sally Miller</ion-label>
+        <button ion-button outline item-end>Follow
+          <ion-icon name="star"></ion-icon>
+        </button>
+      </ion-item>
 
+      <ion-item>
+        <ion-label>Mike Miller</ion-label>
+        <button ion-button outline item-end>Follow
+          <ion-icon name="star"></ion-icon>
+        </button>
+      </ion-item>
 
-
-
-                <button ion-button outline item-end icon-right>
-                    Follow
-                    <ion-icon name="star"></ion-icon>
-
-                </button>
-         
-
-
-        </ion-card-content>
-    </ion-card>
-
-
-
-    <ion-card>
-        <ion-card-content>
-            John Miller
-
-
-
-
-            <button ion-button outline item-end icon-right>
-                Follow
-                <ion-icon name="star"></ion-icon>
-            </button>
-
-
-        </ion-card-content>
-    </ion-card>
-
-
-
-    <ion-card>
-        <ion-card-content>
-            John Miller
-
-
-
-
-            <button ion-button outline item-end icon-right>
-                Follow
-                <ion-icon name="star"></ion-icon>
-            </button>
-
-
-        </ion-card-content>
-    </ion-card>
-
-
-    <ion-card>
-        <ion-card-content>
-            John Miller
-
-
-
-
-            <button ion-button outline item-end icon-right>
-                Follow
-                <ion-icon name="star"></ion-icon>
-            </button>
-
-
-        </ion-card-content>
-    </ion-card>
-
-
-    <ion-card>
-        <ion-card-content>
-            John Miller
-
-
-
-
-            <button ion-button outline item-end icon-right>
-                Follow
-                <ion-icon name="star"></ion-icon>
-            </button>
-
-
-        </ion-card-content>
-    </ion-card>
-
-
-
-    <ion-card>
-        <ion-card-content>
-            John Miller
-
-
-
-
-            <button ion-button outline item-end icon-right>
-                Follow
-                <ion-icon name="star"></ion-icon>
-            </button>
-
-
-        </ion-card-content>
-    </ion-card>
-
+      <ion-item>
+        <ion-label>Kate Miller</ion-label>
+        <button ion-button outline item-end>Follow
+          <ion-icon name="star"></ion-icon>
+        </button>
+      </ion-item>
+    </ion-list>
 
 </ion-content>
