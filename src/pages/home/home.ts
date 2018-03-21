@@ -11,6 +11,7 @@ import { RacerLeaderboard } from '../rleader/rleader';
 import { EventLeaderboard } from '../eleader/eleader';
 import { TeamLeaderboard } from '../tleader/tleader';
 import { FanPage } from '../fanpage/fanpage';
+import { Video } from '../video/video';
 
 @Component({
   selector: 'page-home',
@@ -28,6 +29,7 @@ export class HomePage {
   elead = EventLeaderboard;
   tlead = TeamLeaderboard;
   fan = FanPage;
+  vid = Video;
 
   constructor(app: App, menu: MenuController) {
     menu.enable(true);
