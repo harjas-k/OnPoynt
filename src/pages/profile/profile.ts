@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { HomePage } from '../home/home';
+
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { NavController } from 'ionic-angular';
 
 
 
-
 @Component({
+
 	selector: 'page-profile',
 	templateUrl: 'profile.html'
 })
@@ -106,6 +107,7 @@ export class Profile {
 			this.categoryString = "Expert";
 		}
 	}
+
 
 }
 

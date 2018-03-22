@@ -7,11 +7,13 @@ import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { Http } from '@angular/http';
 import { Platform } from 'ionic-angular';
 
+
 @Component({
 	selector: 'page-login',
 	templateUrl: 'login.html'
 })
 export class LogIn {
+
 
 	homePage: any = HomePage;
 	sign = SignUp;

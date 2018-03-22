@@ -1,15 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\resources",
-    "\\resources\\android",
-    "\\resources\\ios",
     "\\src",
     "\\src\\app",
-    "\\src\\assets",
     "\\src\\pages",
+    "\\src\\pages\\eleader",
+    "\\src\\pages\\fanpage",
+    "\\src\\pages\\forgot",
     "\\src\\pages\\home",
-    "\\src\\pages\\signup"
+    "\\src\\pages\\login",
+    "\\src\\pages\\racerstats"
   ],
+  "SelectedNode": "\\src\\pages\\home\\home.html",
   "PreviewInSolutionExplorer": false
 }

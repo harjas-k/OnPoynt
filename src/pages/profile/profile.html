@@ -2,12 +2,13 @@
     <ion-navbar>
         <ion-title>
             Create an Account
-        </ion-title>
+         </ion-title>
     </ion-navbar>
 </ion-header>
 
 
 <ion-content scrollbar-y-auto>
+
 	<form [formGroup]="profileForm" name="racerProfileForm" (ngSubmit)="verifyContents()">
     <ion-list inset>
 
@@ -26,12 +27,14 @@
         <!--<ion-item>
             <ion-label>Racing Class</ion-label>
             <ion-select interface="popover">
+
                 <ion-option value="Tiny Whoop">Tiny Whoop</ion-option>
                 <ion-option value="180mm-220mm">180mm-220mm</ion-option>
                 <ion-option value="250mm-300mm">250mm-300mm</ion-option>
 
             </ion-select>
         </ion-item>
+
 
         <ion-item>
 			<ion-label>Racer Category</ion-label>
@@ -58,6 +61,10 @@
 	</form>
     <div padding>
         <button ion-button [disabled]="!profileForm.valid" (click)="verifyContents()" color="onpoynt-red" block>Submit</button>
+
+
+    <div padding>
+        <button ion-button color ="danger" [navPush]="home" block>Submit</button>
     </div>
 
 

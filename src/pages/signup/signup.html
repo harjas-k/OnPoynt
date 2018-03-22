@@ -7,6 +7,7 @@
 </ion-header>
 
 <ion-content scrollbar-y-auto>
+
 	<form [formGroup]="accountForm" name="registrationForm">
 		<ion-list inset>
 			<ion-item>
@@ -49,4 +50,9 @@
 		<div padding>
 			<p id="error_message">{{responseData.response}}<p>
 		</div>
+
+  <div padding>
+  <button ion-button color="danger" [navPush]="sc" block>Register</button>
+  </div>
+
 </ion-content>

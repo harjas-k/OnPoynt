@@ -5,6 +5,8 @@ import { Platform } from 'ionic-angular';
 import { Http } from '@angular/http';
 import { HomePage } from '../home/home';
 import { Profile } from '../profile/profile';
+import {SponsorConfirmation} from '../sponsorconf/sponsorconf';
+
 
 declare global {
 	interface Window { sqlPlugin : any}
@@ -16,8 +18,10 @@ declare global {
 })
 
 export class SignUp {
+
 	homePage: any = HomePage;
 	racerProfile: any = Profile;
+  sc = SponsorConfirmation;
 	
 	accountForm : FormGroup;	
 	
@@ -175,5 +179,6 @@ export class SignUp {
 			//this.navCtrl.setRoot(this.homePage);
 		}else{}
 	}
+
 }
 

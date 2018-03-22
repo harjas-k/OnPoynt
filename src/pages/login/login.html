@@ -1,4 +1,5 @@
 <ion-content padding scrollbar-y-auto>
+
 	<div padding>
 		<img src="../assets/imgs/onpoynt.png" alt="OnPoynt Aerial Solution">
 	</div>
@@ -9,10 +10,12 @@
 	<form [formGroup]="loginForm" name = "loginForm" (ngSubmit)="verifyLogin()">
 		<ion-list inset>
 			<ion-item>
+        <ion-icon name="ios-mail-outline"></ion-icon>
 				<ion-input [formControl]="loginForm.controls['email']" type="email" placeholder="Email*" email></ion-input>
 			</ion-item>
 
 			<ion-item>
+        <ion-icon name="ios-lock-outline"></ion-icon>
 				<ion-input [formControl]="loginForm.controls['password2']" type="password" placeholder="Password*"></ion-input>
 			</ion-item>
 		</ion-list>
@@ -29,6 +32,7 @@
 			<button ion-button color="onpoynt-red" block (click)="verifyLogin()"> Login </button>
 		</div>
 	</form>
+
   
 	<div  align ="center">
 		<button ion-button clear id="signup-button" [navPush]="sign"> Don't have an account? Sign Up </button>
