@@ -1,3 +1,4 @@
+
 <ion-header>
   <ion-toolbar>
     <button ion-button menuToggle>
@@ -12,9 +13,6 @@
 
 
 
-
-
-
   <ion-header>
     <ion-toolbar>
       <ion-title>Menu</ion-title>
@@ -22,9 +20,7 @@
   </ion-header>
 
 
-
 <ion-content scrollbar-y-auto>
-
 
   <ion-list>
     <button ion-item>
@@ -63,6 +59,7 @@
     <button ion-item [navPush]="vid">
       Video
     </button>
+
     <button ion-item menuClose="left">
       Close Menu
     </button>
@@ -72,6 +69,7 @@
 
 <ion-nav #content [root]="rootPage"></ion-nav>
 
+
 <ion-content padding scrollbar-y-auto>
 <h2>Welcome to OnPoynt's drone racing app!</h2>
 
@@ -80,6 +78,7 @@
   <div padding>
   <img src="../assets/imgs/onpoynt.png" alt="OnPoynt Aerial Solution">
   </div>
+
 
 
 </ion-content>

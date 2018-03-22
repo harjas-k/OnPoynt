@@ -1,2 +1,23 @@
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null){
+	position: $position;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}
+
 page-login {
+}
+
+#error_message{
+	color: #f24730;
+	@include position(absolute, $left: 10%);
+}
+
+#forgot-button{
+	color: #ff5b36;
+}
+
+#signup-button{
+	color: #ff5b36;
 }

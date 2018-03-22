@@ -13,6 +13,7 @@ import { TeamLeaderboard } from '../tleader/tleader';
 import { FanPage } from '../fanpage/fanpage';
 import { Video } from '../video/video';
 
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -30,6 +31,7 @@ export class HomePage {
   tlead = TeamLeaderboard;
   fan = FanPage;
   vid = Video;
+
 
   constructor(app: App, menu: MenuController) {
     menu.enable(true);
