@@ -16,7 +16,7 @@ export class FanPage {
     this.items =
 
 
-    this.items = ['John Miller', 'Jake Miller', 'Sally Miller', 'Mike Miller', 'Kate Miller'];
+    this.items = ['John Miller', 'Jake Miller', 'Sally Miller', 'Mike Miller', 'Kate Miller', 'The University of Texas at Dallas', 'Southern Methodist University'];
   }
 
   filterItems(ev: any) {
