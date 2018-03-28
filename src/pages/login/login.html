@@ -1,46 +1,44 @@
 <ion-content padding scrollbar-y-auto>
-  <div padding>
-  <img src="../assets/imgs/onpoynt.png" alt="OnPoynt Aerial Solution">
-  </div>
-  <br>
-  <div padding>
-  <h1 align="center"> <i> Drone Racing System </i>  </h1>
-  </div>
-  <ion-list inset>
 
-     <ion-item>
-         <h6 align="left"> <ion-icon name="ios-mail-outline"></ion-icon> Email* </h6>
-    </ion-item>
+	<div padding>
+		<img src="../assets/imgs/onpoynt.png" alt="OnPoynt Aerial Solution">
+	</div>
+	<br>
+	<div padding>
+		<h1 align="center"> <i> Drone Racing System </i>  </h1>
+	</div>
+	<form [formGroup]="loginForm" name = "loginForm" (ngSubmit)="verifyLogin()">
+		<ion-list inset>
+			<ion-item>
+        <ion-icon name="ios-mail-outline"></ion-icon>
+				<ion-input [formControl]="loginForm.controls['email']" type="email" placeholder="Email*" email></ion-input>
+			</ion-item>
 
-    <ion-item>
-        <h6 align="left"> <ion-icon name="ios-lock-outline"></ion-icon> Password* </h6>
-    </ion-item>
+			<ion-item>
+        <ion-icon name="ios-lock-outline"></ion-icon>
+				<ion-input [formControl]="loginForm.controls['password2']" type="password" placeholder="Password*"></ion-input>
+			</ion-item>
+		</ion-list>
+		
+		<div>
+			<p id="error_message">{{responseData.response}}</p>
+		</div>
 
-  </ion-list>
+		<div align = "right">
+			<button ion-button clear id="forgot-button" [navPush]="forgot">Forgot Password?</button>
+		</div>
 
-  <div align = "right">
-      <button ion-button color="dark" [navPush]="forgot" clear>Forgot Password?</button>  
-      </div>
-
-
-
-   
-
-  <div padding>
-    <button ion-button color="danger" block [navPush]="home"> Login </button>
-  </div>
-  
-
-
-
-  <div padding align ="center">
-    <button ion-button color="dark" [navPush]="sign" clear> Don't have an account? Sign Up </button>
-      
-  </div>
+		<div padding>
+			<button ion-button color="onpoynt-red" block (click)="verifyLogin()"> Login </button>
+		</div>
+	</form>
 
   
+	<div  align ="center">
+		<button ion-button clear id="signup-button" [navPush]="sign"> Don't have an account? Sign Up </button>
+	</div>
 
- 
+	
 
 </ion-content>
 
