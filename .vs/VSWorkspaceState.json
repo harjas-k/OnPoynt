@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\resources",
     "\\src",
-    "\\src\\app",
+    "\\src\\assets",
     "\\src\\pages",
-    "\\src\\pages\\eleader",
-    "\\src\\pages\\fanpage",
-    "\\src\\pages\\forgot",
     "\\src\\pages\\home",
-    "\\src\\pages\\login",
-    "\\src\\pages\\racerstats"
+    "\\src\\pages\\safety",
+    "\\src\\pages\\signup",
+    "\\src\\pages\\sponsor",
+    "\\src\\pages\\video"
   ],
-  "SelectedNode": "\\src\\pages\\home\\home.html",
+  "SelectedNode": "\\src\\pages\\video\\video.html",
   "PreviewInSolutionExplorer": false
 }
