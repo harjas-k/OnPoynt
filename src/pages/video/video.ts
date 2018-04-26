@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import {VideoPlayer, VideoOptions} from '@ionic-native/video-player';
-
+import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
+import { Http } from '@angular/http';
+import { Platform } from 'ionic-angular';
 
 @Component({
   selector: 'page-video',

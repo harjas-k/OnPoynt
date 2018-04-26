@@ -84,4 +84,6 @@
     <plugin name="cordova-sqlite-storage" spec="^2.2.0" />
     <plugin name="com.moust.cordova.videoplayer" spec="https://github.com/moust/cordova-plugin-videoplayer.git" />
     <plugin name="cordova-plugin-videoplayer" spec="^0.1.4" />
+    <plugin name="com.hutchind.cordova.plugins.streamingmedia" spec="~0.1.4" />
+    <plugin name="cordova-plugin-x-toast" spec="^2.6.2" />
 </widget>
