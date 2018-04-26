@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import {StreamingMedia , StreamingVideoOptions} from '@ionic-native/streaming-media';
-
+import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
+import { Http } from '@angular/http';
+import { Platform } from 'ionic-angular';
 
 @Component({
   selector: 'page-video',
@@ -8,22 +9,29 @@ import {StreamingMedia , StreamingVideoOptions} from '@ionic-native/streaming-me
 })
 export class Video {
 
-  //videoOptions: VideoOptions;
-  //videoUrl: string;
+   video: any = {
+    url: 'https://www.youtube.com/embed/WVB2GSlyrSk',
+    //url: 'https://youtube/embed/cF2J2bFBUZ8',
+    title: 'video'
+  };
 
-  constructor(private streamingMedia: StreamingMedia){
+
+
+
+  //<iframe width="560" height="315" src="https://www.youtube.com/embed/a3ICNMQW7Ok" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  trustedVideoUrl: SafeResourceUrl;
+
+
+  constructor(private domSanitizer: DomSanitizer){}
+
+  ionViewWillEnter(): void {
+    this.trustedVideoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(this.video.url);
+     
+  }
+
   
-  }
 
-  startVideo() {
-    let options: StreamingVideoOptions = {
-      successCallback: () => { console.log('Finished Video') },
-      errorCallback: (e) => { console.log('Error: ', e)},
-      orientation: 'portrait'
-    };
 
-    this.streamingMedia.playVideo('https://www.youtube.com/watch?v=u6s5144AYO8', options);
-  }
 
   /*public playVideo() {
     this.videoOptions = {volume : 1.0};

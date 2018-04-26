@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SQLite } from '@ionic-native/sqlite';
 import { StreamingMedia } from '@ionic-native/streaming-media';
 import { HttpModule } from '@angular/http';
+import { Toast } from '@ionic-native/toast';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -80,7 +81,8 @@ import { Video } from '../pages/video/video';
     SplashScreen,
     SQLite,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    StreamingMedia
+    StreamingMedia,
+    Toast
   ]
 })
 export class AppModule {}
