@@ -24,6 +24,8 @@ import { ResetPage } from '../pages/reset/reset';
 import { TeamStats } from '../pages/teamstats/teamstats';
 import { RacerLeaderboard } from '../pages/rleader/rleader';
 import { TeamLeaderboard } from '../pages/tleader/tleader';
+import { Video } from '../pages/video/video';
+import { Live } from '../pages/live/live';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { TeamLeaderboard } from '../pages/tleader/tleader';
     UpcomingEvents,
     ForgotPassword,
     MyStats,
+    Video,
+    Live,
     ResetPage,
 	TeamStats,
 	RacerLeaderboard,
@@ -63,6 +67,8 @@ import { TeamLeaderboard } from '../pages/tleader/tleader';
     UpcomingEvents,
     ForgotPassword,
     MyStats,
+    Video,
+    Live,
 	ResetPage,
 	TeamStats,
 	RacerLeaderboard,

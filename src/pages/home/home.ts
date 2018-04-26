@@ -15,6 +15,8 @@ import { NavController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import { Platform } from 'ionic-angular';
 import { TeamStats } from '../teamstats/teamstats';
+import { Video } from '../video/video';
+import { Live } from '../live/live';
 
 @Component({
 	selector: 'page-home',
@@ -32,6 +34,8 @@ export class HomePage {
 	tlead = TeamLeaderboard;
 	teamStats = TeamStats;
 	//sponsorConf: any = SponsorConf;
+  past = Video;
+  live = Live;
 	
 	accountData: any = {};
 	responseData: any = {};

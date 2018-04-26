@@ -4,7 +4,7 @@ import { NavParams } from 'ionic-angular';
 import { NavController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import { Platform } from 'ionic-angular';
-import { SponsorConf } from '../sponsorconf/sponsorconf';
+import { SponsorConfirmation } from '../sponsorconf/sponsorconf';
 
 
 
@@ -19,7 +19,7 @@ import { SponsorConf } from '../sponsorconf/sponsorconf';
 export class Sponsor {
 	raceID: any = {};
 	accountData: any = {};
-	sponsorConf: any = SponsorConf;
+	sponsorConf: any = SponsorConfirmation;
 	responseData: any = {};
 	response: any = {};
 	home: any = HomePage;
