@@ -6,86 +6,68 @@
 
 <ion-content class="cards-bg">
 
+<!--
 <ion-card>
   <ion-card-content>
-
-
-
-      <b>1. John Doe - Points: 119</b>
-
-
-      <div>
-          <h6 align="left">Races:9 | G:1 | B:2 | 4th:0 | 5th: 1 </h6>
-      </div>
-      <div>
-          <h6 style="color:green;">Pro | Washington, USA | Wins: $175.00</h6>
-
-      </div>
-     
-      
-    
-
-
+     1. John Doe - Points: 119
   </ion-card-content>
 </ion-card>
 
-
-    <ion-card>
-        <ion-card-content>
-
-            <b>2. John Miller - Points: 110</b>
-
-            <div>
-                <h6 align="left">Races:9 | G:1 | B:2 | 4th:0 | 5th: 1 </h6>
-            </div>
-            <div>
-                <h6 style="color:green;">Pro | Washington, USA | Wins: $175.00</h6>
-            </div>
-
-
-        </ion-card-content>
-    </ion-card>
-
-    <ion-card>
+<ion-card>
   <ion-card-content>
-
-
-
-      <b>3. Meddy Doe - Points: 108</b>
-
-      <div>
-          <h6 align="left">Races:9 | G:1 | B:2 | 4th:0 | 5th: 1 </h6>
-      </div>
-      <div>
-          <h6 style="color:green;">Pro | Washington, USA | Wins: $175.00</h6>
-      </div>
-
-
+     2. John Miller - Points: 110
   </ion-card-content>
 </ion-card>
 
+<ion-card>
+  <ion-card-content>
+     3. Meddy Doe - Points: 108
+  </ion-card-content>
+</ion-card>
 
-    <ion-card>
-        <ion-card-content>
+<ion-card>
+  <ion-card-content>
+     4. John Miller - Points: 110
+  </ion-card-content>
+</ion-card>
 
-            <b>4. Jane Doe - Points: 110</b>
+<ion-card>
+  <ion-card-content>
+     5. John Miller - Points: 110
+  </ion-card-content>
+</ion-card>
 
-            <<div>
-    <h6 align="left">Races:9 | G:1 | B:2 | 4th:0 | 5th: 1 </h6>
-</div>
-<div>
-    <h6 style="color:green;">Pro | Washington, USA | Wins: $175.00</h6>
-</div>
-        </ion-card-content>
-    </ion-card>
+<button ion-button  block>View All</button>
+
+-->
+<ion-item>
+	<ion-label> Sort By: </ion-label>
+	<ion-select [(ngModel)]="sortBy" (ionChange)="gatherLeaderboard()">
+		<ion-option value="points">Points</ion-option>
+		<ion-option value="firstPlacements"> First Placements </ion-option>
+		<ion-option value="secondPlacements"> Second Placements </ion-option>
+		<ion-option value="thirdPlacements"> Third Placements </ion-option>
+	</ion-select>
+</ion-item>
 
 
+<ion-card *ngFor = "let racer of leaderboard">
+	<ion-card-content>
+		<p align="left"><b>{{racer[0]}} - Points: {{racer[4]}}</b></p>
+		<p>Races: 1st: {{racer[1]}} | 2nd:{{racer[2]}} | 3rd:{{racer[3]}} </p>
+	</ion-card-content>
+</ion-card>
 
-    <div padding align="center">
-        <button ion-button clear [navPush]="sign"> View All </button>
-    </div>
+<!--<ion-grid>
+	<ion-row *ngFor = "let racer of leaderboard">
+		<ion-col col-4> {{racer[0]}} </ion-col>
+		<ion-col> {{racer[1]}} </ion-col>
+		<ion-col> {{racer[2]}} </ion-col>
+		<ion-col> {{racer[3]}} </ion-col>
+		<ion-col> {{racer[4]}} </ion-col>
+	</ion-row>
+</ion-grid>
 
-
-
+-->
 
 </ion-content>

@@ -6,82 +6,17 @@
 
 <ion-content class="cards-bg">
 
-<ion-card>
-  <ion-card-content>
-      <b>1. The University of Texas at Dallas</b>
+<!--<ion-grid>
+	<ion-row *ngFor="let team of leaderboard">
+		<ion-col col-10>{{team[0]}} </ion-col>
+		<ion-col> {{team[1]}}</ion-col>
+	</ion-row>
+</ion-grid>
+-->
 
-
-      <div>
-          <h6 align="left"> Pro | Washington, USA | Wins: $175 </h6>
-      </div>
-
-      <div>
-          <h6 align="left">Points: 219 <ion-icon name="md-trophy"></ion-icon> </h6>
-      </div>
-
-  </ion-card-content>
+<ion-card *ngFor = "let team of leaderboard">
+	<ion-card-content>
+		<p align="left"><b>{{team[0]}}</b></p> <p align = "right">Points: {{team[1]}}</p>
+	</ion-card-content>
 </ion-card>
-
-
-
-<ion-card>
-  <ion-card-content>
-
-      <b>2. Unviersity of North Texas</b>
-
-      <div>
-          <h6 align="left"> Pro | Washington, USA | Wins: $150 </h6>
-      </div>
-      <div>
-          <h6 align="left">Points: 200 <ion-icon name="md-trophy"></ion-icon> </h6>
-      </div>
-  </ion-card-content>
-</ion-card>
-
-
-
-<ion-card>
-  <ion-card-content>
-
-      <b>3. The University of Texas at Arlingtons</b>
-      <div>
-          <h6 align="left"> Pro | Washington, USA | Wins: $125 </h6>
-      </div>
-      <div>
-          <h6 align="left">Points: 182 <ion-icon name="md-trophy"></ion-icon> </h6>
-      </div>
- 
-  </ion-card-content>
-</ion-card>
-
-<ion-card>
-  <ion-card-content>
-
-      <b>4. Southern Methodist University</b>
-      <div>
-          <h6 align="left"> Pro | Washington, USA | Wins: $100 </h6>
-      </div>
-      <div>
-          <h6 align="left">Points: 171 <ion-icon name="md-trophy"></ion-icon> </h6>
-      </div>
-
-  </ion-card-content>
-</ion-card>
-
-<ion-card>
-  <ion-card-content>
-
-      <b>5. The University of Texas</b>
-      <div>
-          <h6 align="left"> Pro | Washington, USA | Wins: $75 </h6>
-      </div>
-      <div>
-          <h6 align="left">Points: 160 <ion-icon name="md-trophy"></ion-icon> </h6>
-      </div>
-     
-  </ion-card-content>
-</ion-card>
-
-<button ion-button  block>View All</button>
-
 </ion-content>

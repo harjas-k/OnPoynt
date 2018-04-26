@@ -1,0 +1,31 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>
+			Reset your Password
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<div padding>
+		<form [formGroup]="resetForm" name="resetForm">
+			<ion-list>
+				<ion-item>
+					<ion-input [formControl]="resetForm.controls['oldPassword']" type="password" placeholder="Old Password"></ion-input>
+				</ion-item>
+				
+				<ion-item>
+					<ion-input [formControl]="resetForm.controls['newPassword1']" type="password" placeholder="New Password"></ion-input>
+				</ion-item>
+				
+				<ion-item>
+					<ion-input [formControl]="resetForm.controls['newPassword2']" type="password" placeholder = "Re-type New Password"></ion-input>
+				</ion-item>
+			</ion-list>
+		</form>
+	</div>
+	
+	<div padding align = "center">
+		<button ion-button color="onpoynt-red" (click)="verifyAttempt()"> Change my Password </button> 
+	</div>
+</ion-content>

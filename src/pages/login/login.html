@@ -1,5 +1,4 @@
-<ion-content padding scrollbar-y-auto>
-
+<ion-content padding scrollbar-y-auto id="login-content">
 	<div padding>
 		<img src="../assets/imgs/onpoynt.png" alt="OnPoynt Aerial Solution">
 	</div>
@@ -10,18 +9,20 @@
 	<form [formGroup]="loginForm" name = "loginForm" (ngSubmit)="verifyLogin()">
 		<ion-list inset>
 			<ion-item>
-        <ion-icon name="ios-mail-outline"></ion-icon>
-				<ion-input [formControl]="loginForm.controls['email']" type="email" placeholder="Email*" email></ion-input>
+				<ion-icon item-start name="mail"></ion-icon>
+				<ion-input id="email" [formControl]="loginForm.controls['email']" type="email" placeholder="Email*"></ion-input>
 			</ion-item>
 
+			<div id="input-padding"></div>
+			
 			<ion-item>
-        <ion-icon name="ios-lock-outline"></ion-icon>
-				<ion-input [formControl]="loginForm.controls['password2']" type="password" placeholder="Password*"></ion-input>
+				<ion-icon item-start name="lock"></ion-icon>
+				<ion-input id="password" [formControl]="loginForm.controls['password2']" type="password" placeholder="Password*"></ion-input>
 			</ion-item>
 		</ion-list>
 		
 		<div>
-			<p id="error_message">{{responseData.response}}</p>
+			<p id="error_message" [hidden]="hideResponse">{{responseData.response}}</p>
 		</div>
 
 		<div align = "right">
@@ -32,7 +33,6 @@
 			<button ion-button color="onpoynt-red" block (click)="verifyLogin()"> Login </button>
 		</div>
 	</form>
-
   
 	<div  align ="center">
 		<button ion-button clear id="signup-button" [navPush]="sign"> Don't have an account? Sign Up </button>

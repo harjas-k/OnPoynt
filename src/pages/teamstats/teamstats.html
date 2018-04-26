@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+      <ion-title>My Team Stats</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="cards-bg">
+
+<ion-card>
+  <ion-card-content>
+    <p>First Placements: {{teamData[1]}}</p> 
+	<p> Second Placements: {{teamData[2]}} </p>
+	<p> Third Placements: {{teamData[3]}} </p> 
+	<p> Accumulated Points: {{teamData[4]}} </p>
+  </ion-card-content>
+</ion-card>
+
+<ion-card>
+<ion-list>
+	<ion-item *ngFor="let racer of teamData.racers">
+		<p align=left> {{ racer }} <button id="racer" item-end ion-button color="onpoynt-red" (click)="searchRacer(racer)">View</button> </p>
+	</ion-item>
+</ion-list>
+</ion-card>
+</ion-content>

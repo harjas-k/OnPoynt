@@ -1,17 +1,25 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Forgot Password
-    </ion-title>
-  </ion-navbar>
+	<ion-navbar>
+		<ion-title>
+			Forget Password?
+		</ion-title>
+	</ion-navbar>
 </ion-header>
 
 <ion-content>
-  <!--<h2 align="center">Forgot Password</h2>-->
-  <div padding>
-    <ion-input type="text" placeholder="Your Email Address"></ion-input>
-  </div>
-  <div padding align ="center">
-    <button ion-button color="danger" [navPush]=login>Reset my Password</button>
-  </div>
+	<div padding>
+		<form [formGroup]="forgotForm" name="forgotForm">
+			<ion-list>
+				<ion-item>
+					<ion-input [formControl]="forgotForm.controls['email']" type="text" placeholder="Your Email Address"></ion-input>
+				</ion-item>
+			</ion-list>	
+		</form>
+	</div>
+	<div padding>
+		<p id="error_message" [hidden]="hideResponse">{{responseData.response}}</p>
+	</div>
+	<div padding align ="center">
+		<button ion-button color="onpoynt-red" (click)="verifyEmail()">Reset my Password</button>
+	</div>
 </ion-content>

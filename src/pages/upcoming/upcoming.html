@@ -1,69 +1,20 @@
 <ion-header>
   <ion-navbar>
-      <ion-title>UpComing Events</ion-title>
+      <ion-title>Upcoming Events</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content class="cards-bg">
 
-<ion-card>
+<ion-card *ngFor = "let race of raceData">
   <ion-card-content>
-      <b>USA Drone Racing League</b>
-      Join our community to connect
-
-
-      <div>
-          <h6 align="left"> <ion-icon name="ios-pin-outline"></ion-icon>   Washington </h6>
-          <h6 align="left"> <ion-icon name="ios-calendar-outline"></ion-icon>   March 3, 2018  8:30PM </h6>
-      </div>   
-     
-      <button ion-button  round>Register</button>
-  </ion-card-content>
-</ion-card>
-
-<ion-card>
-  <ion-card-content>
-      <b>USA Drone Racing League</b>
-      Join our community to connect
-
-
-      <div>
-          <h6 align="left"> <ion-icon name="ios-pin-outline"></ion-icon>   Washington </h6>
-          <h6 align="left"> <ion-icon name="ios-calendar-outline"></ion-icon>   March 3, 2018  8:30PM </h6>
-      </div>
-
-      <button ion-button round>Register</button>
-  </ion-card-content>
-</ion-card>
-
-<ion-card>
-  <ion-card-content>
-      <b>USA Drone Racing League</b>
-      Join our community to connect
-
-
-      <div>
-          <h6 align="left"> <ion-icon name="ios-pin-outline"></ion-icon>   Washington </h6>
-          <h6 align="left"> <ion-icon name="ios-calendar-outline"></ion-icon>   March 3, 2018  8:30PM </h6>
-      </div>
-
-      <button ion-button round>Register</button>
+      <p align=left><b>{{race[1]}}</b> </p> <br>
+	  <p align=left>{{race[2]}}, {{race[3]}}, {{race[4]}} {{race[5]}}</p> <br>
+	  <p align = left>{{race[6]}}, {{race[7]}}</p> <br>
+	  <p align=right> <button ion-button color="onpoynt-red" id="register-button" (click)="registerEvent(race[0])">Register </button> </p>
   </ion-card-content>
 </ion-card>
 
 
-    <ion-card>
-        <ion-card-content>
-            <b>USA Drone Racing League</b>
-            Join our community to connect
-
-
-            <div>
-                <h6 align="left"> <ion-icon name="ios-pin-outline"></ion-icon>   Washington </h6>
-                <h6 align="left"> <ion-icon name="ios-calendar-outline"></ion-icon>   March 3, 2018  8:30PM </h6>
-            </div>
-            <button ion-button round>Register</button>
-        </ion-card-content>
-    </ion-card>
 
 </ion-content>

@@ -35,5 +35,9 @@
 
 
     <div padding align="center">
-        <button ion-button color="light" [navPush]="mode"> Confirm </button>
+        <button ion-button color="onpoynt-red" (click)="register()"> Confirm </button>
     </div>
+	
+	<div id="error_message">
+		{{responseData.response}}
+	</div>

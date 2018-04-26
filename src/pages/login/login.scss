@@ -6,12 +6,12 @@
 	left: $left;
 }
 
-page-login {
-}
-
 #error_message{
 	color: #f24730;
 	@include position(absolute, $left: 10%);
+}
+
+page-login {
 }
 
 #forgot-button{
@@ -20,4 +20,8 @@ page-login {
 
 #signup-button{
 	color: #ff5b36;
+}
+
+#login-content{
+	background-color: #e0e0e0 !important; 
 }

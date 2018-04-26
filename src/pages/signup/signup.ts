@@ -5,8 +5,8 @@ import { Platform } from 'ionic-angular';
 import { Http } from '@angular/http';
 import { HomePage } from '../home/home';
 import { Profile } from '../profile/profile';
-import {SponsorConfirmation} from '../sponsorconf/sponsorconf';
-
+import { NavParams } from 'ionic-angular';
+//import { Safety } from '../safety/safety';
 
 declare global {
 	interface Window { sqlPlugin : any}
@@ -18,15 +18,15 @@ declare global {
 })
 
 export class SignUp {
-
 	homePage: any = HomePage;
 	racerProfile: any = Profile;
-  sc = SponsorConfirmation;
+	//safetyPage: any = Safety;
 	
 	accountForm : FormGroup;	
 	
 	responseData: any = {};
 	addressData: any = {};
+	accountData: any = {};
 	
 	// Assumption: Initially, everyone is a fan (no additional registration needed)
 	racerButton: number = 0;
@@ -38,6 +38,8 @@ export class SignUp {
 	
 	state: String = "";
 	city: String = "";
+	
+	response: any = {};
 	
 	constructor(public navCtrl: NavController, private formBuilder: FormBuilder, public plt: Platform, public http: Http) {
 		this.accountForm = this.formBuilder.group({
@@ -63,49 +65,25 @@ export class SignUp {
 		/// https://stackoverflow.com/questions/38116048/i-am-creating-weather-app-by-using-ionic
 		/// http://maps.googleapis.com/maps/api/geocode/json?address=75056
 		
-		// Need to add components: 
 		
-		this.http.get("https://maps.googleapis.com/maps/api/geocode/json?address="+this.accountForm.controls['zipcode'].value)
+		
+		// Need to add components: 
+
+		this.http.get("https://maps.googleapis.com/maps/api/geocode/json?address="+this.accountForm.controls['zipcode'].value+"&components=country:US|postal_code:"+this.accountForm.controls['zipcode'].value+"&key=AIzaSyDqx8ew7_UL2bSwLYoQn1sKmKUmWs6Srn4")
 			.subscribe(data => {
 				this.addressData = data["_body"];
 				this.addressData = JSON.parse(this.addressData);
 				//console.log(this.addressData);
 				// Check on status of request
 				this.checkOnStatus(this.addressData);
+				this.submitToServer();
 			},error => {
 				console.log("Error occurred during location.");
-			});
-		
-		
-		
-			
-		
-		
-		var link2 = "http://localhost:80/OnPoynt/register.php";
-		var data = JSON.stringify({
-			firstName: 	this.accountForm.controls['firstName'].value,
-			lastName:  	this.accountForm.controls['lastName'].value,
-			email:		this.accountForm.controls['email'].value,
-			password2:	this.accountForm.controls['password'].value,
-			cPassword2: this.accountForm.controls['confPassword'].value,
-			dob: 		this.accountForm.controls['dob'].value,
-			zipcode:	this.accountForm.controls['zipcode'].value,
-			state: 		this.state,
-			city:		this.city,
-			role:		this.role
-		});
-		
-		this.http.post(link2, data)
-			.subscribe(data => {
-				this.responseData.response = data["_body"];
-				// Look for success message
-				this.accountCreation();
-			}, error => {
-				console.log("Some error occurred.");
-			});
+			});			
 	}
 	
 	// Server Methods
+	
 	checkOnStatus(addressData){
 		console.log(this.addressData.status);
 		if(addressData.status == "OK"){
@@ -123,8 +101,37 @@ export class SignUp {
 				}
 			}
 		}else{
-			this.responseData.response = "Error connecting to Google Geocode API. Please try again in a few minutes.";
+			if(addressData.status == "ZERO_RESULTS"){
+				this.responseData.response = "We could not locate the ZIPCODE. Please try again.";
+			}else{
+			this.responseData.response = "Error connecting to Google Geocode API. Please try again in a few minutes.";	
+			}
 		}
+	}
+	
+	submitToServer(){
+		var link2 = "http://localhost:80/OnPoynt/register.php";
+		var data = JSON.stringify({
+			firstName: 	this.accountForm.controls['firstName'].value,
+			lastName:  	this.accountForm.controls['lastName'].value,
+			email:		this.accountForm.controls['email'].value,
+			password2:	this.accountForm.controls['password'].value,
+			cPassword2: this.accountForm.controls['confPassword'].value,
+			dob: 		this.accountForm.controls['dob'].value,
+			zipcode:	this.accountForm.controls['zipcode'].value,
+			state: 		this.state,
+			city:		this.city,
+			role:		"Fan"
+		});
+		
+		this.http.post(link2, data)
+			.subscribe(data => {
+				this.responseData.response = data["_body"];
+				// Look for success message
+				this.accountCreation();
+			}, error => {
+				console.log("Some error occurred.");
+			});
 	}
 	
 	// Website Functionality
@@ -173,12 +180,35 @@ export class SignUp {
 	
 	accountCreation(){
 		// Changing pages once account is created
-		if(this.responseData.response == "Account created successfully." && this.role == "Racer"){
-			//this.navCtrl.setRoot(this.racerProfile);
-		}else if(this.responseData.response == "Account created successfully." && this.role == "Fan"){
-			//this.navCtrl.setRoot(this.homePage);
-		}else{}
+		// passthrough email, fname, lname, city, state, zipcode, role
+		console.log(this.responseData.response);
+		this.accountData = JSON.parse(this.responseData.response);
+		this.responseData.response = "";
+		if(this.accountData[0] == "OK"){
+			if(this.accountData[7] == "Fan"){
+				this.navCtrl.setRoot(this.homePage, {
+					email: this.accountData[3],
+					fname: this.accountData[1],
+					lname: this.accountData[2],
+					role: this.accountData[7],
+					state: this.accountData[5],
+					city: this.accountData[6],
+					zipcode: this.accountData[4]
+				});
+			}else{
+				this.navCtrl.setRoot(this.racerProfile, {
+					email: this.accountData[3],
+					fname: this.accountData[1],
+					lname: this.accountData[2],
+					role: this.accountData[7],
+					state: this.accountData[5],
+					city: this.accountData[6],
+					zipcode: this.accountData[4]
+				});
+			}
+		}else{
+			this.responseData.response = "Could not create account: ".concat(this.responseData.response);
+		}
 	}
-
 }
 

@@ -6,91 +6,20 @@
 
 <ion-content class="cards-bg">
 
-    <ion-card>
-        <ion-card-content>
-            <b>Garrison "Garrison" Turner</b>
-
-            <div>
-                <h6 align="left">Broncos Whoop </h6>
-            </div>
-            <div>
-                <h6 align="left">Under 120mm (Tiny Whoop) Quadcopter </h6>
-            </div>
-
-
-            <button ion-button color="light" round> <ion-icon name="ios-wifi"></ion-icon> 5.5 GHz</button>
-            <button ion-button color="light" round> 5855 F 7</button>
-
-            <div>
-                <h6 align="left">Points: 25 <ion-icon name="md-trophy"></ion-icon> </h6>
-            </div>
-
-
-
-
-
-        </ion-card-content>
-    </ion-card>
-
-    <ion-card>
-        <ion-card-content>
-            <b>Garrison "Garrison" Turner</b>
-            <div>
-                <h6 align="left">Broncos Whoop </h6>
-            </div>
-            <div>
-                <h6 align="left">Under 120mm (Tiny Whoop) Quadcopter </h6>
-            </div>
-
-            <button ion-button color="light" round> <ion-icon name="ios-wifi"></ion-icon> 5.5 GHz</button>
-            <button ion-button color="light" round> 5855 F 7</button>
-            <div>
-                <h6 align="left">Points: 23 <ion-icon name="md-trophy"></ion-icon> </h6>
-            </div>
-
-
-        </ion-card-content>
-    </ion-card>
-
-
-    <ion-card>
-        <ion-card-content>
-            <b>Garrison "Garrison" Turner</b>
-            <div>
-                <h6 align="left">Broncos Whoop </h6>
-            </div>
-            <div>
-                <h6 align="left">Under 120mm (Tiny Whoop) Quadcopter </h6>
-            </div>
-
-            <button ion-button color="light" round> <ion-icon name="ios-wifi"></ion-icon> 5.5 GHz</button>
-            <button ion-button color="light" round> 5855 F 7</button>
-            <div>
-                <h6 align="left">Points: 12 <ion-icon name="md-trophy"></ion-icon> </h6>
-            </div>
-
-
-        </ion-card-content>
-    </ion-card>
-
-    <ion-card>
-        <ion-card-content>
-            <b>Garrison "Garrison" Turner</b>
-            <div>
-                <h6 align="left">Broncos Whoop </h6>
-            </div>
-            <div>
-                <h6 align="left">Under 120mm (Tiny Whoop) Quadcopter </h6>
-            </div>
-
-            <button ion-button color="light" round> <ion-icon name="ios-wifi"></ion-icon> 5.5 GHz</button>
-            <button ion-button color="light" round> 5855 F 7</button>
-            <div>
-                <h6 align="left">Points: 07 <ion-icon name="md-trophy"></ion-icon> </h6>
-            </div>
-
-
-        </ion-card-content>
-    </ion-card>
+<ion-card>
+  <ion-card-content [hidden]="hideProfileInfo">
+     <b> {{profileData.fname}} "{{profileData.nickname}}" {{profileData.lname}} </b>
+	 <p> Tiny Whoop: {{profileData.tinyWhoopText}} </p>
+	 <p> 180mm-220mm: {{profileData.category180220Text}} </p>
+	 <p> 250mm-300mm: {{profileData.category250300Text}} </p>
+	 <p> 1st Placements: {{profileData.firstPlacements}} </p>
+	 <p> 2nd Placements: {{profileData.secondPlacements}} </p>
+	 <p> 3rd Placements: {{profileData.thirdPlacements}} </p>
+	 <p> Best Lap Time: {{profileData.bestLapTime}} </p>
+	 <p> Best Lap Speed: {{profileData.bestLapSpeed}} </p>
+	 <p> Best Score: {{profileData.bestScore}} </p>
+	 <p> Accumulated Points: {{profileData.accumulatedPoints}} </p>
+  </ion-card-content>
+</ion-card>
 
 </ion-content>
