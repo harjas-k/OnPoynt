@@ -1,15 +1,14 @@
 <ion-header>
     <ion-navbar>
         <ion-title>
-            Create an Account
-         </ion-title>
+            Create a Racer Profile
+        </ion-title>
     </ion-navbar>
 </ion-header>
 
 
 <ion-content scrollbar-y-auto>
-
-	<form [formGroup]="profileForm" name="racerProfileForm" (ngSubmit)="verifyContents()">
+	<form [formGroup]="profileForm" name="racerProfileForm">
     <ion-list inset>
 
         <ion-item>
@@ -19,53 +18,73 @@
         <ion-item>
             <ion-input [formControl]="profileForm.controls['FAAregistrationNumber']" type="number" placeholder="FAA Drone Registration"></ion-input>
         </ion-item>
-
+	</ion-list>
+	</form>
+	<ion-list>
         <ion-item>
-            <ion-input [formControl]="profileForm.controls['teamName']" type="text" placeholder="School/Team"></ion-input>
+            <!--<ion-input [formControl]="profileForm.controls['teamName']" type="text" placeholder="School/Team"></ion-input>-->
+			<ion-searchbar (search)="getItems($event)" placeholder="Team Name" id="searchBar">  </ion-searchbar>
+			
+			<ion-list [hidden]="hideList">
+				<ion-item *ngFor="let item of items">
+					{{ item.team_name }} <button ion-button (click)="setTeamName(item.team_name)">select</button>
+				</ion-item>
+			</ion-list>
+			
         </ion-item>
-
-        <!--<ion-item>
-            <ion-label>Racing Class</ion-label>
-            <ion-select interface="popover">
-
-                <ion-option value="Tiny Whoop">Tiny Whoop</ion-option>
-                <ion-option value="180mm-220mm">180mm-220mm</ion-option>
-                <ion-option value="250mm-300mm">250mm-300mm</ion-option>
-
-            </ion-select>
-        </ion-item>
-
-
-        <ion-item>
-			<ion-label>Racer Category</ion-label>
-			<ion-select interface="popover">
-				<ion-option value="Beginner">Beginner</ion-option>
-				<ion-option value="Competitive">Competitive</ion-option>
-				<ion-option value="Expert">Expert</ion-option>
-			</ion-select>
-		</ion-item>
-		
-		-->
-		
+	</ion-list>
+	
+	<ion-list inset>
 		<div padding></div>
 		
-		<button ion-button id="class-tiny-whoop" [color]="buttonColorTinyWhoop" (click)="classButtonPressed(1)">Tiny Whoop</button>  <button ion-button id="class-180-220" [color]="buttonColor180_220" (click)="classButtonPressed(2)">180mm-220mm</button> <button ion-button id="class-250-300" [color]="buttonColor250_300" (click)="classButtonPressed(3)">250mm-300mm</button>
-		
-		
-		<div padding></div>
-		
-		<button ion-button id="cat-beginner" [color]="buttonColorBeginner" (click)="categoryButtonPressed(1)">Beginner</button> <button ion-button id="cat-competitive" [color]="buttonColorCompetitive" (click)="categoryButtonPressed(2)">Competitive</button> <button ion-button id="cat-expert" [color]="buttonColorExpert" (click)="categoryButtonPressed(3)">Expert</button>
-
+		<div id="selectionGrid">
+			<ion-grid>
+				<ion-row justify-content-around>
+					<ion-col> </ion-col>
+					<ion-col> Category  </ion-col> 
+					<ion-col> Tiny Whoop </ion-col> 
+					<ion-col> 180mm-220mm </ion-col> 
+					<ion-col> 250mm-300m </ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col> Class </ion-col>
+					<ion-col> </ion-col>
+					<ion-col> </ion-col>
+					<ion-col> </ion-col>
+					<ion-col> </ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col> Beginner </ion-col>
+					<ion-col> </ion-col>
+					<ion-col> <ion-checkbox [(ngModel)]="beginnerTiny" (click)="newSelection(1,1)"> </ion-checkbox> </ion-col>
+					<ion-col> <ion-checkbox [(ngModel)]="beginner180220" (click)="newSelection(2,1)"> </ion-checkbox> </ion-col>
+					<ion-col> <ion-checkbox [(ngModel)]="beginner250300" (click)="newSelection(3,1)"> </ion-checkbox> </ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col> Comp </ion-col>
+					<ion-col> </ion-col>
+					<ion-col> <ion-checkbox [(ngModel)]="competitiveTiny" (click)="newSelection(1,2)"> </ion-checkbox> </ion-col>
+					<ion-col> <ion-checkbox [(ngModel)]="competitive180220" (click)="newSelection(2,2)"> </ion-checkbox> </ion-col>
+					<ion-col> <ion-checkbox [(ngModel)]="competitive250300" (click)="newSelection(3,2)"> </ion-checkbox> </ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col> Expert </ion-col>
+					<ion-col> </ion-col>
+					<ion-col> <ion-checkbox [(ngModel)]="expertTiny" (click)="newSelection(1,3)"> </ion-checkbox> </ion-col>
+					<ion-col> <ion-checkbox [(ngModel)]="expert180220" (click)="newSelection(2,3)"> </ion-checkbox> </ion-col>
+					<ion-col> <ion-checkbox [(ngModel)]="expert250300" (click)="newSelection(3,3)"> </ion-checkbox> </ion-col>
+				</ion-row>
+			</ion-grid>
+		</div>
 
     </ion-list>
-	</form>
+	
     <div padding>
         <button ion-button [disabled]="!profileForm.valid" (click)="verifyContents()" color="onpoynt-red" block>Submit</button>
-
-
-    <div padding>
-        <button ion-button color ="danger" [navPush]="home" block>Submit</button>
     </div>
+	<div padding>
+		<p id="error_message">{{responseData.response}}</p>
+	</div>
 
 
   
